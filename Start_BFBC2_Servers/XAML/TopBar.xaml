@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Start_BFBC2_Servers.XAML.TopBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Start_BFBC2_Servers.XAML"
+             mc:Ignorable="d">
+    <DockPanel Background="{StaticResource DefColor}" Height="25">
+        <DockPanel.Resources>
+            
+            
+            <Style TargetType="Image">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="21"/>
+                <Setter Property="Height" Value="21"/>
+                <Setter Property="Stretch" Value="Fill"/>
+            </Style>
+        </DockPanel.Resources>
+        
+        
+        <Image Width="23" Height="23" Margin="1" Source="/Images/fighter_jet.png" Stretch="Fill" DockPanel.Dock="Left"/>
+
+        <Button Click="exit_Click">
+            <Image Source="/Images/close.png"/>
+        </Button>
+        
+        <Button Click="maximize_Click">
+            <Image x:Name="Maximize" Source="/Images/maximize.png"/>
+        </Button>
+
+        <Button Click="minimize_Click">
+            <Image Source="/Images/minimize.png"/>
+        </Button>
+
+        <Rectangle Fill="{x:Null}" DockPanel.Dock="Right"/>
+
+        <Label Content="BFBC2 Server StartUp" Foreground="White" DockPanel.Dock="Right"/>
+    </DockPanel>
+</UserControl>

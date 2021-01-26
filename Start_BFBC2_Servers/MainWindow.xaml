@@ -1,0 +1,47 @@
+﻿<Window x:Class="Start_BFBC2_Servers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Start_BFBC2_Servers"
+        xmlns:controls="clr-namespace:Start_BFBC2_Servers.XAML"
+        mc:Ignorable="d"
+        Icon="Images/fighter.ico"
+        Title="MainWindow" Height="350" Width="560" MinWidth="300" MinHeight="200" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <DockPanel Background="#222222">
+        <controls:TopBar DockPanel.Dock="Top" MouseDown="MouseDrag"/>
+
+        <Grid DockPanel.Dock="Right" Width="75">
+
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,0">
+                    <GradientStop Color="#00000000" Offset="0"/>
+                    <GradientStop Color="#c75d00" Offset="2"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Border Margin="0 4 0 5" CornerRadius="0 0 0 15" Background="#1d1d1d"/>
+
+            <StackPanel Width="72" DockPanel.Dock="Right">
+                
+                <Button x:Name="Serv" Height="42" Width="72" Margin="0 2" Cursor="Hand" Click="ManageButtons">
+                    <Image Source="/Images/server.png" Stretch="Uniform"/>
+                </Button>
+
+                <Button x:Name="Cons" Height="42" Width="72" Margin="0 2" Cursor="Hand" Click="ManageButtons">
+                    <Image Source="/Images/console.png" Stretch="Uniform"/>
+                </Button>
+                
+                <Button x:Name="Sett" Height="42" Width="72" Margin="0 2" Cursor="Hand" Click="ManageButtons">
+                    <Image Source="/Images/settings.png" Stretch="Uniform"/>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+
+
+        <Grid x:Name="CenterView">
+            
+        </Grid>
+    </DockPanel>
+</Window>
